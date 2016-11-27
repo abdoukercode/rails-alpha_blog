@@ -1,7 +1,21 @@
 class  ArticlesController < ApplicationController
+
+    #list ArticlesController
+    def index
+        @articles=Article.all
+    end
+    # new action
     def new
         @article= Article.new
     end
+
+    def edit
+        @article =Article.find(params[:id])
+        
+    end
+
+
+# create action
 
     def create
         #render plain: params[:article].to_json
@@ -14,10 +28,24 @@ class  ArticlesController < ApplicationController
         end
     end
 
+    def update
+
+        @article = Article.find(params[:id])
+        if @article.update(article_params)
+            flash[:notice] = "Article was succesfully updated"
+            redirect_to article_path(@article)
+        else
+            render 'edit'
+        end
+    end
+
+# show action
+
     def show
         @article= Article.find(params[:id])
     end
 
+# params
     private
         def article_params
             params.require(:article).permit(:title, :description)
