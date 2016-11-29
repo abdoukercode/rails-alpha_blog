@@ -2,7 +2,9 @@ $navbar-default-bg:black;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
 #logo {
     float: left;
     font-size: 1.7em;
@@ -10,6 +12,8 @@ $navbar-default-bg:black;
     text-transform: uppercase;
     letter-spacing: -1px;
     font-weight: bold;
+    word-spacing: 5px;
+    font-family: 'Tangerine', serif;
 }
 
 #logo:hover {
@@ -35,6 +39,7 @@ $navbar-default-bg:black;
     margin-bottom: 30px;
     letter-spacing: -1px;
     font-weight: bold;
+    font-family: 'Tangerine', serif;
 
 }
 
@@ -48,10 +53,13 @@ $navbar-default-bg:black;
     color: #fff;
 }
 
+
+
 footer {
     margin-top: 45px;
     padding-top: 5px;
     border-top: 1px solid #eaeaea;
+    font-weight: bolder;
     color:#777;
 
 }
