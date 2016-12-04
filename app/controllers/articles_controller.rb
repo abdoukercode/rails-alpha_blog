@@ -23,7 +23,7 @@ class  ArticlesController < ApplicationController
 # create action
 
     def create
-        debugger
+        
         #render plain: params[:article].to_json
         @article= Article.new(article_params)
         @article.user= current_user
